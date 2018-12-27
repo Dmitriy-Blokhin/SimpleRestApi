@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -21,6 +22,7 @@ namespace SimpleRestApi.Controllers
         [Route("")]
         public IEnumerable<User> GetUsers()
         {
+            Trace.TraceInformation("Called GetUsers() method");
             return _users;
         }
 
@@ -29,6 +31,7 @@ namespace SimpleRestApi.Controllers
         [ResponseType(typeof(User))]
         public IHttpActionResult GetUser(int id)
         {
+            Trace.TraceInformation($"Called GetUser({id}) method");
             var user = _users.FirstOrDefault(u => u.Id == id);
             if (user == null)
             {
