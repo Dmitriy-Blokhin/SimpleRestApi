@@ -6,7 +6,7 @@ The meanings of this project is to create a basic start point for new projects w
 
 This API service also has swagger integration and support.
 
-After cloaningm building and running solution locally under ISS Express, the API Service will be available by following URL:
+After cloaning, building and running solution locally under ISS Express, the API Service will be available by following URL:
   http://localhost:49181/api/users
 
 Swagger UI will be available by following URL:
